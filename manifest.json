@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "OpenAI Highlighter",
+  "version": "1.0",
+  "description": "Highlight text and get OpenAI responses.",
+  "background": {  
+	  "scripts": ["menu.js"],
+	  "persistent": false  
+   },  
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "https://api.openai.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
